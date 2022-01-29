@@ -1,8 +1,22 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders the app with default state', () => {
+
+
+  render(<Provider store={store}>
+    <AppConnector />
+  </Provider>);
+
+  const titleElement = screen.getByText('my record rolodex');
+  const artistsLabel = screen.getByText('Artists');
+  const recordsLabel = screen.getByText('Records');
+  const detailsLabel = screen.getByText('Record Details');
+  const copyrightElement = screen.getByText(/Your Friendly Neighbourhood Record Store/i);
+
+  expect(titleElement).toBeInTheDocument();
+  expect(artistsLabel).toBeInTheDocument();
+  expect(recordsLabel).toBeInTheDocument();
+  expect(detailsLabel).toBeInTheDocument();
+  expect(copyrightElement).toBeInTheDocument();
 });

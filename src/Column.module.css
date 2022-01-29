@@ -1,0 +1,24 @@
+:root {
+  --column-header-height: 50px;
+}
+
+.columnWrapper {
+  height: 100%;
+  background-color: rgb(191, 213, 191);
+  overflow: hidden;
+}
+.column {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  box-sizing: border-box;
+}
+.columnHeader {
+  height: var(--column-header-height);
+}
+.columnChildren {
+  height: calc(100% - --column-header-height);
+  overflow: scroll;
+  background-color: rgb(255, 217, 0);
+}

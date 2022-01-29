@@ -1,0 +1,23 @@
+.selected {
+  font-style: italic;
+  padding-left: 1rem;
+}
+
+.normal {
+  background-color: beige;
+}
+
+.listItem {
+  margin: 3px;
+  cursor: pointer;
+}
+
+.formWrapper {
+  width: 100%;
+  margin: 2px;
+  display: flex;
+}
+
+.formInput {
+  flex: 1 auto;
+}

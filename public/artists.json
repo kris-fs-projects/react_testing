@@ -1,0 +1,28 @@
+{
+    "artists": [
+        {
+            "id": "1",
+            "name": "The Tragically Hip"
+        },
+        {
+            "id": "2",
+            "name": "The Watchmen"
+        },
+        {
+            "id": "3",
+            "name": "The Rolling Stones"
+        },
+        {
+            "id": "4",
+            "name": "The Beatles"
+        },
+        {
+            "id": "5",
+            "name": "Led Zeppelin"
+        },
+        {
+            "id": "6",
+            "name": "Jethro Tull"
+        }
+    ]
+}

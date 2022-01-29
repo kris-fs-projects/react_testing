@@ -1,23 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import styles from './App.module.css';
+import Column from './Column';
+import { ArtistsConnector } from './connectors/ArtistsConnector';
+import { RecordsConnector } from './connectors/RecordsConnector';
+import { RecordDetailsConnector } from './connectors/RecordDetailsConnector';
+import { useEffect } from 'react';
 
-function App() {
+function App({ fetchArtistsList, fetchRecordsList, selectedArtist, selectedRecord }) {
+
+  useEffect(() => {
+    fetchArtistsList();
+    fetchRecordsList();
+  }, [fetchArtistsList, fetchRecordsList]);
+
+  const recordsHeading = selectedArtist ? `${selectedArtist.name} Records` : 'Records';
+  const detailsHeading = selectedRecord ? `${selectedRecord.title} 411` : 'Record Details';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className={styles.rolodexContainer}>
+      <header>
+        <h1>my record rolodex</h1>
       </header>
+      <div className="fullHeight">
+        <div className={styles.artistsBox}>
+          <Column heading="Artists">
+            <ArtistsConnector />
+          </Column>
+        </div>
+        <div className={styles.recordsBox}>
+          <Column heading={recordsHeading}>
+            <RecordsConnector />
+          </Column>
+        </div>
+        <div className={styles.detailsBox}>
+          <Column heading={detailsHeading}>
+            <RecordDetailsConnector />
+          </Column>
+        </div>
+      </div>
+      <footer>&copy; 2022 Your Friendly Neighbourhood Record Store</footer>
     </div>
   );
 }

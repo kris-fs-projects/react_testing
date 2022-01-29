@@ -1,17 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+import { AppConnector } from './connectors/AppConnector';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+// import * as rtl from '@testing-library/react';
+// import * as ue from '@testing-library/user-event';
+// console.log('react-testing-library ', rtl);
+// console.log('user-event ', ue);
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
+  <StrictMode>
+    <Provider store={store}>
+      <AppConnector />
+    </Provider>
+  </StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
