@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Connector should render with the state from the store 1`] = `
+<DocumentFragment>
+  <div
+    class="rolodexContainer"
+  >
+    <header>
+      <h1>
+        my record rolodex
+      </h1>
+    </header>
+    <div
+      class="fullHeight"
+    >
+      <div
+        class="artistsBox"
+      >
+        <div
+          class="columnWrapper"
+        >
+          <div
+            class="column"
+          >
+            <h2
+              class="columnHeader"
+            >
+              Artists
+            </h2>
+            <div
+              class="columnChildren"
+            >
+              <input
+                placeholder="type a new artist name and hit enter to save it"
+                style="width: 100%; margin: 2px; box-sizing: border-box;"
+              />
+              <ul>
+                <li
+                  class="listItem selected"
+                >
+                  The Tragically Hip
+                </li>
+                <li
+                  class="listItem normal"
+                >
+                  The Watchmen
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="recordsBox"
+      >
+        <div
+          class="columnWrapper"
+        >
+          <div
+            class="column"
+          >
+            <h2
+              class="columnHeader"
+            >
+              The Tragically Hip Records
+            </h2>
+            <div
+              class="columnChildren"
+            >
+              <div
+                class="formWrapper"
+              >
+                <input
+                  class="formInput"
+                  placeholder="album title"
+                  style="width: 50%;"
+                />
+                <input
+                  class="formInput"
+                  placeholder="year"
+                  style="width: 20%;"
+                />
+                <button
+                  style="width: 15%;"
+                >
+                  Save
+                </button>
+              </div>
+              <ul>
+                <li
+                  class="listItem normal"
+                >
+                  Up To Here
+                </li>
+                <li
+                  class="listItem selected"
+                >
+                  Saskadelphia
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="detailsBox"
+      >
+        <div
+          class="columnWrapper"
+        >
+          <div
+            class="column"
+          >
+            <h2
+              class="columnHeader"
+            >
+              Saskadelphia 411
+            </h2>
+            <div
+              class="columnChildren"
+            >
+              <div
+                class="selected"
+              >
+                <p>
+                  Saskadelphia
+                </p>
+                <p>
+                  2021
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      © 2022 Your Friendly Neighbourhood Record Store
+    </footer>
+  </div>
+</DocumentFragment>
+`;
