@@ -1,13 +1,19 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import { Provider } from 'react-redux';
+import { AppConnector } from './connectors/AppConnector';
+import { store } from './store/store';
 
 test('renders the app with default state', () => {
 
-
+  // Arrange
   render(<Provider store={store}>
     <AppConnector />
   </Provider>);
 
+  // Act
+
+
+  // Assert
   const titleElement = screen.getByText('my record rolodex');
   const artistsLabel = screen.getByText('Artists');
   const recordsLabel = screen.getByText('Records');
