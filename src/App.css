@@ -1,0 +1,17 @@
+:root {
+  --header-and-footer-height: 50px;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.fullHeight {
+  height: calc(100vh - var(--header-and-footer-height) * 2);
+  width: 100%;
+}
+
+header,
+footer {
+  height: var(--header-and-footer-height);
+  text-align: center;
+}
